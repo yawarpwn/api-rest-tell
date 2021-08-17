@@ -8,8 +8,8 @@ import config from './config'
 			useNewUrlParser: true,
 			//user: config.MONGO_USER, 
 		}
-		const db = await mongoose.connect(`mongodb+srv://yawarpwn:Db4524987@cluster0.ms9fs.mongodb.net/tellDatabase?retryWrites=true&w=majority`, mongooseOptions)
-		console.log('database is connect to:', db.connection.name)
+		const db = await mongoose.connect(`mongodb+srv://${config.MONGO_USER}:${config.MONGO_PASSWORD}@${config.MONGO_HOST}/${config.MONGO_DATABASE}?retryWrites=true&w=majority`, mongooseOptions)
+		console.log('database is connect to:', db.connection.name, config.MONGO_HOST)
 	}	catch(err) {
 		console.error(err)
 	}
