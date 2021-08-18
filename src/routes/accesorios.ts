@@ -1,5 +1,5 @@
 import { Schema, model } from 'mongoose'
-const productSchema = new Schema({
+const accesorioSchema = new Schema({
 	name: { type: String, require: true },
 	desc: { 
 		parraph1: {
@@ -29,4 +29,4 @@ const productSchema = new Schema({
 	timestamps: true
 })
 
-export default model ('Product', productSchema)
+export default model ('Accesorio', accesorioSchema)

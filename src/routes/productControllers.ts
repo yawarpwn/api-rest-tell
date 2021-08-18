@@ -17,7 +17,7 @@ export const getProduct: RequestHandler = async (req, res) => {
 }
 
 export const createProduct: RequestHandler = async (req, res) => {
-	const ProductFound = await Product.findOne({ url: req.body.name })
+	const ProductFound = await Product.findOne({ name: req.body.name })
 	if(ProductFound)
 		return res.status(301).json({ message: 'name already exist' })
 	console.log(req.body)
