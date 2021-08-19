@@ -1,6 +1,10 @@
 import { RequestHandler  } from 'express'
 import  Product  from './product'
 
+export const getHome: RequestHandler =  (_req, res) => {
+	res.send('hello world')	
+}
+
 export const getProducts: RequestHandler = async (_req, res) => {
 	try {
 		const products = await Product.find()

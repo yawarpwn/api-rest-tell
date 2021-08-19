@@ -6,13 +6,16 @@ import {
 	createProduct, 
 	getProduct, 
 	updateProduct, 
-	deleteProduct
+	deleteProduct, 
+	getHome
 } from './productControllers'
 import * as cintasCtr from './cintasControllers'
 import * as accesoriosCtr from './accesoriosControllers'
 import * as extintoresCtr from './extintoresControllers'
 import * as corporativosCtr from './corporativosControllers'
 import * as eppsCtr from './eppsControllers'
+
+router.get('/', getHome)
 
 router.get('/proteccion-vial', getProducts)
 router.get('/cintas', cintasCtr.getCintas)

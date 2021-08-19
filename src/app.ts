@@ -1,13 +1,10 @@
 import express from 'express'
 import morgan from 'morgan'
 import cors from 'cors'
-import config from './config'
 
 import productRoutes from './routes/productRoutes'
 
 const app = express()
-
-app.set('port', config.PORT)
 
 
 app.use(morgan('dev'))
