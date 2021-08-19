@@ -21,9 +21,8 @@ const config_1 = __importDefault(require("./config"));
             useNewUrlParser: true,
             //user: config.MONGO_USER, 
         };
-        const db = yield mongoose_1.default.connect(`mongodb+srv://${config_1.default.MONGO_USER}:${config_1.default.MONGO_PASSWORD}@${config_1.default.MONGO_HOST}/${config_1.default.MONGO_DATABASE}?retryWrites=true&w=majority`, mongooseOptions);
+        const db = yield mongoose_1.default.connect(config_1.default.MONGODB_URI, mongooseOptions);
         console.log('database is connect to:', db.connection.name);
-        console.log('lo nuevo node');
     }
     catch (err) {
         console.error(err);
